@@ -1,0 +1,19 @@
+{
+	"name": "bureaucracy-generator-backend",
+	"authors": [
+		"Václav Kozák"
+	],
+    "dependencies": {
+        "vibe-d": "~>0.8.4",
+        "dpq2": "~>1.0.0-rc.6",
+        "vibe-d-postgresql": "~>2.0.0-alpha.3",
+        "vibe-d:tls": "0.8.4",
+        "djinja": "~>0.1.0-beta.1"
+    },
+    "subConfigurations": {
+		"vibe-d:tls": "openssl-1.1"
+	},
+	"description": "Backend for Bureaucracy Generator.",
+	"copyright": "Copyright © 2018, Václav Kozák",
+	"license": "GPL-3.0"
+}

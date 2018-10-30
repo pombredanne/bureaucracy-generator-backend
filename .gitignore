@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+bureaucracy-generator-backend.so
+bureaucracy-generator-backend.dylib
+bureaucracy-generator-backend.dll
+bureaucracy-generator-backend.a
+bureaucracy-generator-backend.lib
+bureaucracy-generator-backend-test-*
+*.exe
+*.o
+*.obj
+*.lst
+bureaucracy-generator-backend

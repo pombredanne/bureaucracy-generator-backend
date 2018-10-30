@@ -1,0 +1,60 @@
+<h1>Privacy Policy</h1>
+
+Effective date: {{ today }}
+
+<h2>Basic business information</h2>
+
+## 0 - individual, 1 - business
+{% if entityType == 0 %}
+    <p>
+    ... is individual ....
+    </p>
+{% else %}
+    <p>
+    .... is bussines, name: {{ businessName }}...
+    </p>
+{% endif %}
+
+<p>
+... operates from {{businessLocation}}
+</p>
+
+{% if website %}
+<h2>Website</h2>
+
+<p>
+This app has a website: {{ websiteName }} (url: {{ websiteUrl }})...
+</p>
+{% endif %}
+{% if mobileApp %}
+<h2>Mobile app</h2>
+<p>
+This app has a mobile app: {{ mobileAppName }}...
+</p>
+{% endif %}
+<h2>WHAT INFORMATION {{ appName }} COLLECTS AND WHY</h2>
+<p>{{ appName }} ("us", "we", or "our) collects basic information from our users and some personal information.</p>
+<ul>
+    {% if collectEmail %}<li>Email address</li> {% endif %}
+    {% if collectFirstAndLastName %}<li>First and last name</li> {% endif %}
+    {% if collectPhoneNumber %}<li>Phone number</li> {% endif %}
+    {% if collectAddress %}<li>Address</li> {% endif %}
+</ul>
+
+{% if askForUserLocation %}
+<h2>Location</h2>
+<p>App asks for user's location...</p>
+{% endif %}
+
+{% if useAnalytics %}
+<h2>Analytics</h2>
+<p>App uses analytics services (such as Google Analytics, etc.)...</p>
+{% endif %}
+
+<h2>Contact</h2>
+<p>If you have any questions about the privacy policy you can contact us:</p>
+<ul>
+    {% if canContactByEmail %}<li>by email: {{ contactEmail }}</li> {% endif %}
+    {% if canContactByPhone %}<li>by phone: {{ contactPhone }}</li> {% endif %}
+    {% if canContactByWebsite %}<li>by website: {{ contactWebsite }}</li> {% endif %}
+</ul>
